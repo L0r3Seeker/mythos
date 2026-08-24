@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mythos Client — 2B2T Custom Client</title>
+    <meta name="description" content="Mythos Client — A custom Minecraft enhancement client for 2B2T. Phantom Shield obfuscation, silent double-mining, SelfTrap, firework placement, mace-spear synergy, Skybox rendering." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css?v=26" />
+</head>
+<body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+    <header class="nav">
+        <a href="#top" class="nav__brand">
+            <img class="nav__logo" src="logo.svg" alt="Mythos Logo" width="34" height="34" />
+            <span class="nav__name">Mythos</span>
+        </a>
+        <div class="nav__group">
+            <nav class="nav__links">
+                <a href="#gui" data-i18n="nav_gui">GUI</a>
+                <a href="#video" data-i18n="nav_video">Video</a>
+                <a href="#features" data-i18n="nav_features">Features</a>
+                <a href="#buy" data-i18n="nav_buy">Buy</a>
+            </nav>
+            <button class="nav__lang" id="langToggle" title="Switch Language">中文</button>
+        </div>
+        <a href="#buy" class="nav__cta" data-i18n="nav_cta">Get Now</a>
+    </header>
+
+    <section id="top" class="hero">
+        <div class="hero__inner">
+            <p class="hero__eyebrow reveal">2B2T · 1.21.1 · Fabric</p>
+            <h1 class="hero__title reveal" data-delay="1">
+                <span class="hero__title-line hero__title-line--title">Mythos</span>
+                <span class="hero__title-line" data-i18n="hero_sub">Built for the Chaos</span>
+            </h1>
+            <p class="hero__desc reveal" data-delay="2" data-i18n="hero_desc">
+                A New Generation of Minecraft Enhancement. Designed for flexibility, performance, and control.
+            </p>
+            <div class="hero__actions reveal" data-delay="3">
+                <a href="#buy" class="btn btn--primary" data-i18n="btn_buy">Purchase / Contact</a>
+                <a href="#video" class="btn btn--ghost" data-i18n="btn_watch">Watch Demo</a>
+            </div>
+            <ul class="hero__chips reveal" data-delay="4">
+                <li data-i18n="chip_update">Free Updates</li>
+                <li data-i18n="chip_support">Priority Support</li>
+                <li data-i18n="chip_phantom">Phantom Shield Verified</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="gui" class="gui-section">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">ClickGUI</p>
+            <h2 class="section__title" data-i18n="gui_title">Client GUI</h2>
+        </div>
+
+        <div class="clickgui reveal reveal--zoom" id="clickgui">
+            <div class="cg-search">
+                <span class="cg-search__icon">⌕</span>
+                <input type="text" id="cgSearch" placeholder="Search modules…" autocomplete="off" data-i18n-ph="search_ph" />
+            </div>
+            <div class="cg-page cg-page--module is-active" data-page="module">
+                <div class="cg-panels" id="cgPanels"></div>
+            </div>
+        </div>
+        <div class="cg-tooltip" id="cgTooltip" aria-hidden="true"></div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="video" class="video-section">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">Showcase</p>
+            <h2 class="section__title" data-i18n="video_title">Showcase</h2>
+            <p class="section__sub">Mythos Client — 2B2T Showcase (1.21.1)</p>
+        </div>
+        <div class="video-frame reveal reveal--zoom" id="videoFrame">
+            <div class="video-placeholder" id="videoPlaceholder">
+                <div class="video-spinner"></div>
+                <span data-i18n="video_loading">Loading video…</span>
+            </div>
+        </div>
+        <a class="video-source reveal" href="https://www.bilibili.com/video/BV17Dbe6MEom/" target="_blank" rel="noopener" data-i18n="video_source">Open on Bilibili →</a>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="features" class="features">
+        <div class="section__head reveal">
+            <p class="section__eyebrow">Capabilities</p>
+            <h2 class="section__title" data-i18n="feat_title">Core Features</h2>
+        </div>
+        <div class="features__grid">
+            <article class="feat reveal reveal--left">
+                <span class="feat__num">01</span>
+                <h3 data-i18n="feat_1_title">3c3u Silent Double-Mine</h3>
+                <p data-i18n="feat_1_desc">Seamless auto-production with instant resupply. Maximize AFK efficiency.</p>
+            </article>
+            <article class="feat reveal reveal--right" data-delay="1">
+                <span class="feat__num">02</span>
+                <h3 data-i18n="feat_2_title">SelfTrap + AntiGlass</h3>
+                <p data-i18n="feat_2_desc">Glass trap self-defense, firework crystal block, enemy trap counter.</p>
+            </article>
+            <article class="feat reveal reveal--left" data-delay="1">
+                <span class="feat__num">03</span>
+                <h3 data-i18n="feat_3_title">Aerial Potion</h3>
+                <p data-i18n="feat_3_desc">Mid-air potion management, auto-supply for teammates, air superiority.</p>
+            </article>
+            <article class="feat reveal reveal--right" data-delay="2">
+                <span class="feat__num">04</span>
+                <h3 data-i18n="feat_4_title">Mace-Spear Synergy</h3>
+                <p data-i18n="feat_4_desc">DoublePop / AutoMace / AutoSpear — coordinated burst for instant pressure.</p>
+            </article>
+            <article class="feat reveal reveal--left" data-delay="2">
+                <span class="feat__num">05</span>
+                <h3 data-i18n="feat_5_title">Skybox Rendering</h3>
+                <p data-i18n="feat_5_desc">Custom skybox rendering, immersive visuals, high performance.</p>
+            </article>
+            <article class="feat reveal reveal--right" data-delay="3">
+                <span class="feat__num">06</span>
+                <h3 data-i18n="feat_6_title">Cross-Server Chat</h3>
+                <p data-i18n="feat_6_desc">Cross-server chat, punctuation utilities, seamless team coordination.</p>
+            </article>
+            <article class="feat feat--wide reveal reveal--zoom" data-delay="4">
+                <span class="feat__num">★</span>
+                <h3 data-i18n="feat_7_title">Phantom Shield Obfuscation</h3>
+                <p data-i18n="feat_7_desc">Phantom Shield obfuscation verification. Anti-reverse-engineering protection.</p>
+            </article>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <section id="buy" class="buy">
+        <div class="buy__card reveal reveal--zoom">
+            <p class="section__eyebrow">Get Mythos</p>
+            <h2 class="buy__title" data-i18n="buy_title">Purchase / Contact</h2>
+            <p class="buy__text" data-i18n="buy_text">
+                A Minecraft enhancement client<br/>
+                Standalone or use alongside other clients<br/>
+                Continuously optimized. Feedback welcome.
+            </p>
+            <button class="btn btn--primary btn--lg" id="buyBtn" data-i18n="btn_buy_now">Purchase / Contact</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <img src="logo.svg" alt="Mythos" width="22" height="22" />
+                <span class="footer__brand-name">Mythos</span>
+            </div>
+            <p class="footer__copy">© 2026 Mythos. Not affiliated with Mojang.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="qqModal" aria-hidden="true">
+        <div class="modal__backdrop" data-close></div>
+        <div class="modal__panel" role="dialog" aria-modal="true">
+            <button class="modal__close" data-close aria-label="关闭">×</button>
+            <p class="modal__eyebrow" data-i18n="modal_eyebrow">Official QQ Group</p>
+            <h3 class="modal__title" data-i18n="modal_title">Join Group Chat</h3>
+            <div class="modal__qq">
+                <code class="modal__qq-num" id="qqNum">1071595115</code>
+                <button class="modal__copy" id="copyQq" data-i18n="modal_copy">Copy</button>
+            </div>
+            <p class="modal__tip" data-i18n="modal_tip">Contact the group owner or admin to get started</p>
+        </div>
+    </div>
+
+    <script src="script.js?v=15"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a9bff"/>
+      <stop offset="1" stop-color="#6a78ff"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="64" cy="64" r="52" stroke="url(#g1)" stroke-width="2.5" fill="none" opacity="0.9"/>
+  <!-- Four-point star (top) -->
+  <path d="M64 8 L66 56 L72 62 L66 64 L64 120 L62 64 L56 62 L62 56 Z" fill="#4a9bff" opacity="0.85"/>
+  <!-- M letter -->
+  <path d="M38 96 L38 42 L50 66 L64 44 L78 66 L90 42 L90 96"
+        stroke="url(#g1)" stroke-width="3.5" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Inner circle accent -->
+  <circle cx="64" cy="64" r="38" stroke="#4a9bff" stroke-width="0.8" fill="none" opacity="0.35"/>
+</svg>
